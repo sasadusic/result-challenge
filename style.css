@@ -1,0 +1,190 @@
+:root{
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Light-red-05: hsla(0, 100%, 67%, .1);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Orangey-yellow-01: hsla(39, 100%, 56%, .1);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Green-teal-01: hsla(166, 100%, 37%, .1);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Cobalt-blue-01: hsla(234, 85%, 45%, .1);
+
+    /* Gradients */
+    /* (background) */
+    --Light-slate-blue: hsl(252, 100%, 67%); 
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Light-royal-blue-05: hsla(241, 81%, 54%, .8);
+    /* (background) */
+    /* (circle) */
+    --Violet-blue : hsla(256, 72%, 46%, 1);
+    --Persian-blue : hsla(241, 72%, 46%, 0);
+    /* (circle) */
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Pale-blue);
+}
+.card{
+    width: 700px;
+    /* height: 400px; */
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+}
+.left{
+    position: relative;
+    /* height: 100%; */
+    width: 50%;
+    border-radius: 30px;
+    background: linear-gradient(var(--Light-royal-blue-05), var(--Light-royal-blue));
+    text-align: center;
+    color: var(--Light-lavender);
+    padding: 32px;
+}
+.right{
+    position: relative;
+    /* height: 482px; */
+    width: 50%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: var(--White);
+    padding: 32px;
+}
+.left-header{
+    font-size: 24px;
+}
+.circle{
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.circle-num{
+    font-size: 45px;
+    font-weight: 900px;
+    color: var(--White);
+}
+.circle-sub-num{
+    font-size: 14px;
+    color: var(--Light-lavender);
+}
+.great{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 900px;
+    font-style: bold;
+    margin-bottom: 18px;
+}
+.phar{
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+.right-header{
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+.sub-card{
+    background: var(--Light-red-05);
+    margin-bottom: 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+}
+.desc{
+    font-size: 18px;
+    font-weight: 500;
+}
+.sub-card-img{
+    margin-right: 12px;
+}
+.result{
+    color: var(--Dark-gray-blue);
+}
+span{
+    color: #000;
+    font-weight: 700;
+}
+.reaction .desc{
+    color: var(--Light-red);
+}
+.memory{
+    background: var(--Orangey-yellow-01);
+}
+.memory .desc{
+    color: var(--Orangey-yellow);
+}
+.verbal{
+    background: var(--Green-teal-01);
+}
+.verbal .desc{
+    color: var(--Green-teal);
+}
+.visual{
+    background: var(--Cobalt-blue-01);
+}
+.visual .desc{
+    color: var(--Cobalt-blue);
+}
+.btn{
+    position: relative;
+    width: 100%;
+    margin-top: 32px;
+    padding: 12px;
+    border-radius: 50px;
+    outline-color: transparent;
+    border: none;
+    background: var(--Dark-gray-blue);
+    color: #fff;
+}
+.btn:hover{
+    background: linear-gradient(var(--Light-royal-blue-05), var(--Light-royal-blue));
+}
+@media (width < 576px) {
+    .card{
+        display: block;
+    }
+    .left{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .right{
+        width: 100%;
+    }
+    .circle{
+        width: 140px;
+        height: 140px;
+        margin: 24px auto;
+    }
+    .sub-card{
+        margin-bottom: 8px;
+    }
+    .btn{
+        margin-top: 18px;
+    }
+}
